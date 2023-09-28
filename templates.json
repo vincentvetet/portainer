@@ -38,7 +38,7 @@
                   "name": "MYSQL_DATABASE_ROOT_PASSWORD"
                 }
               ],
-              "volume":[
+              "volumes":[
                 {
                   "default": "/",
                   "label": "Où sera stocké /var/www/html",

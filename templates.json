@@ -3,12 +3,12 @@
     "templates": [
         {
             "type": 1,
-            "title": "Mautic",
+            "title": "Wordpress",
             "description": "Open-source marketing automation platform",
-            "categories": ["marketing"],
+            "categories": ["Web"],
             "platform": "linux",
-            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mautic.png",
-            "image": "mautic/mautic:latest",
+            "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wordpress.png",
+            "image": "wordpress:latest",
             "env": [
               {
                 "name": "MAUTIC_DB_HOST",
@@ -20,12 +20,23 @@
                 "label": "Database password"
               }
             ],
+            "volumes": [
+                {
+                  "name": "MAUTIC_DB_HOST",
+                  "label": "MySQL database host",
+                  "type": "container"
+                },
+                {
+                  "name": "MAUTIC_DB_PASSWORD",
+                  "label": "Database password"
+                }
+              ],
             "ports": ["80/tcp"],
             "volumes": [
               {
                 "container": "/var/www/html"
               }
             ]
-          },
+          }
   ]
 }

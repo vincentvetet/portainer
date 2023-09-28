@@ -5,9 +5,9 @@
             "title": "Jellyfin",
             "type": 1, 
             "categories": ["Media Server"],
-            "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.",
+            "description": "Jellyfin est un système multimédia logiciel libre qui vous permet de contrôler la gestion et la diffusion de vos médias. Il s'agit d'une alternative aux systèmes propriétaires Emby et Plex, pour fournir des médias depuis un serveur dédié aux appareils des utilisateurs finaux via plusieurs applications.",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/jellyfin.png",
-            "name": "jellyfin",
+            "name": "jellyfin_app",
             "image": "linuxserver/jellyfin:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -46,23 +46,23 @@
                   "container": "/media/Manga"
                 },
                 {
-                    "bind": "/Manga",
+                    "bind": "/Animés",
                     "container": "/media/Animés"
                 },
                 {
-                    "bind": "/Manga",
+                    "bind": "/Séries",
                     "container": "/media/Séries"
                 },
                 {
-                    "bind": "/Manga",
+                    "bind": "/Emission",
                     "container": "/media/Emission"
                 },
                 {
-                    "bind": "/Manga",
+                    "bind": "/Films",
                     "container": "/media/Films"
                 },
                 {
-                    "bind": "/Manga",
+                    "bind": "/Tutoriels",
                     "container": "/media/Tutoriels"
                 }
               ]
@@ -71,9 +71,9 @@
             "title": "Nginx Proxy Manager",
             "type": 1,
             "categories": ["Proxy Server"],
-            "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
+            "description": "Nginx Proxy Manager vous permet de transférer facilement vers vos sites Web exécutés chez vous ou autrement, y compris SSL gratuit, sans avoir à en savoir trop sur Nginx ou Letsencrypt.",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/proxy_mgr.png",
-            "name": "nginx-proxy-manager",
+            "name": "npm_app",
             "image": "jc21/nginx-proxy-manager:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -100,6 +100,44 @@
                 "container": "/etc/letsencrypt"
               }
             ]
-          }
+          },
+          {
+            "title": "Heimdall",
+			"type": 1,
+			"categories": ["Web"],
+			"description": "Heimdall est un moyen d'organiser de manière simple tous ces liens vers vos sites Web et applications Web les plus utilisés.",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/heimdall-icon.png",
+			"name": "heimdall_app",
+            "image": "linuxserver/heimdall:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+                {
+					"default": "Europe/Paris",
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"ports": [
+				"80:80/tcp",
+				"443:443/tcp"
+			],
+			"volumes": [
+				{
+					"bind": "/apps/heimdall",
+					"container": "/config"
+				}
+			]
+		}
   ]
 }

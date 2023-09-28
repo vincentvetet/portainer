@@ -11,6 +11,7 @@
             "image": "linuxserver/jellyfin:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
+            "network": "jellyfin",
             "ports": [
                 "8096:8096/tcp",
                 "7359:7359/tcp",
@@ -77,6 +78,7 @@
             "image": "jc21/nginx-proxy-manager:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
+            "network": "npm",
             "env": [
               {
                 "label": "DB_SQLITE_FILE",
@@ -111,6 +113,7 @@
             "image": "linuxserver/heimdall:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
+            "network": "heimdall",
             "env": [
 				{
 					"default": "1000",
@@ -149,6 +152,7 @@
             "image": "vaultwarden/server:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
+            "network": "bitwarden",
 			"ports": [
 				"80:80/tcp",
 				"443:443/tcp",
@@ -171,6 +175,7 @@
             "image": "nginx:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
+            "network": "nginx",
 			"ports": [
 				"80:80/tcp",
 				"443:443/tcp"
@@ -192,6 +197,7 @@
             "image": "lscr.io/linuxserver/qbittorrent:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
+            "network": "qbittorrent",
             "env": [
 				{
 					"default": "1000",

@@ -26,6 +26,6 @@
                 "container": "/var/www/html"
               }
             ]
-          },
+          }
   ]
 }

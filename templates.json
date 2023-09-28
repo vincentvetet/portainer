@@ -27,7 +27,7 @@
                     "container": "/cache"
                 },
                 {
-                    "bind": "/apps/jellyfin/config",
+                    "bind": "/apps/jellyfin/media",
                     "container": "/media"
                 },
                 {

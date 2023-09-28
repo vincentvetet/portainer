@@ -235,6 +235,50 @@
 					"container": "/downloads"
 				}
 			]
+		},
+        {
+            "title": "Watchtower",
+			"type": 1,
+			"categories": ["Outils"],
+			"description": "Avec Watchtower, vous pouvez mettre à jour la version en cours d'exécution de votre application conteneurisée simplement en envoyant une nouvelle image vers le Docker Hub ou votre propre registre d'images. Watchtower supprimera votre nouvelle image, arrêtera progressivement votre conteneur existant et le redémarrera avec les mêmes options que celles utilisées lors de son déploiement initial.",
+			"logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/watchtower.png",
+			"name": "watchtower_app",
+            "image": "containrrr/watchtower:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "network": "watchtower",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "100",
+					"label": "PGID",
+					"name": "PGID"
+				},
+                {
+					"default": "Europe/Paris",
+					"label": "TZ",
+					"name": "TZ"
+				},
+                {
+					"default": "true",
+					"label": "Supprimes les anciennes images",
+					"name": "WATCHTOWER_CLEANUP"
+				},
+                {
+					"default": "true",
+					"label": "Inclus tous les containers",
+					"name": "WATCHTOWER_INCLUDE_STOPPED"
+				},
+                {
+					"default": "86400",
+					"label": "Intervalles de mise à jour",
+					"name": "WATCHTOWER_POLL_INTERVAL"
+				}
+			]
 		}
   ]
 }

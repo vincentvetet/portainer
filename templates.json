@@ -39,7 +39,7 @@
                   "label": "Mot de passe root de la base de données",
                   "name": "MYSQL_DATABASE_ROOT_PASSWORD"
                 }
-              ],
+              ]
         }
   ]
 }

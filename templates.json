@@ -122,7 +122,7 @@
 				},
 				{
 					"default": "1000",
-					"label": "Groupe ID",
+					"label": "Group ID",
 					"name": "PGID"
 				},
                 {
@@ -206,7 +206,7 @@
 				},
 				{
 					"default": "1000",
-					"label": "Groupe ID",
+					"label": "Group ID",
 					"name": "PGID"
 				},
                 {
@@ -255,7 +255,7 @@
 				},
 				{
 					"default": "100",
-					"label": "Groupe ID",
+					"label": "Group ID",
 					"name": "PGID"
 				},
                 {
@@ -274,9 +274,9 @@
 					"name": "WATCHTOWER_INCLUDE_STOPPED"
 				},
                 {
-					"default": "86400",
-					"label": "Intervalles de mise à jour",
-					"name": "WATCHTOWER_POLL_INTERVAL"
+					"default": "0 0 4 * * *",
+					"label": "MAJ tous les jours à 4h",
+					"name": "WATCHTOWER_SCHEDULE"
 				}
 			],
             "volumes": [

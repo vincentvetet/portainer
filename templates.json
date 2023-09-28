@@ -31,10 +31,6 @@
                     "container": "/media"
                 },
                 {
-                    "bind": "/apps/jellyfin/media",
-                    "container": "/config"
-                },
-                {
                     "bind": "/Théatre",
                     "container": "/media/Théatre"
                 },

@@ -138,6 +138,28 @@
 					"container": "/config"
 				}
 			]
+		},
+        {
+            "title": "Bitwarden",
+			"type": 1,
+			"categories": ["Gestion"],
+			"description": "Gestionnaire de mot de passe qui permet de générer et de conserver des mots de passe de manière sécurisée",
+			"logo": "https://raw.githubusercontent.com/bitwarden/brand/master/icons/1024x1024.png",
+			"name": "bitwarden_app",
+            "image": "vaultwarden/server:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+			"ports": [
+				"80:80/tcp",
+				"443:443/tcp"
+                "3012:3012/tcp"
+			],
+			"volumes": [
+				{
+					"bind": "/apps/bitwarden/data",
+					"container": "/data"
+				}
+			]
 		}
   ]
 }

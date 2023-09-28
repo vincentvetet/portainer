@@ -281,54 +281,6 @@
 					"container": "/var/run/docker.sock"
 				}
 			]
-		},
-        {
-            "title": "Type 2",
-			"type": 2,
-			"categories": ["Web"],
-			"description": "Nginx est un serveur Web fortement axé sur une concurrence élevée, des performances et une faible utilisation de la mémoire. Il peut également servir de serveur proxy inverse pour les protocoles HTTP, HTTPS, SMTP, POP3 et IMAP, ainsi que d'équilibreur de charge et de cache HTTP.",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nginx-icon.png",
-			"name": "nginx_app",
-            "image": "nginx:latest",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "network": "nginx",
-			"ports": [
-				"80:80/tcp",
-				"443:443/tcp"
-			]
-		},
-        {
-            "title": "Type 3",
-			"type": 3,
-			"categories": ["Web"],
-			"description": "Nginx est un serveur Web fortement axé sur une concurrence élevée, des performances et une faible utilisation de la mémoire. Il peut également servir de serveur proxy inverse pour les protocoles HTTP, HTTPS, SMTP, POP3 et IMAP, ainsi que d'équilibreur de charge et de cache HTTP.",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nginx-icon.png",
-			"name": "nginx_app",
-            "image": "nginx:latest",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "network": "nginx",
-			"ports": [
-				"80:80/tcp",
-				"443:443/tcp"
-			]
-		},
-        {
-            "title": "Type 4",
-			"type": 4,
-			"categories": ["Web"],
-			"description": "Nginx est un serveur Web fortement axé sur une concurrence élevée, des performances et une faible utilisation de la mémoire. Il peut également servir de serveur proxy inverse pour les protocoles HTTP, HTTPS, SMTP, POP3 et IMAP, ainsi que d'équilibreur de charge et de cache HTTP.",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nginx-icon.png",
-			"name": "nginx_app",
-            "image": "nginx:latest",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "network": "nginx",
-			"ports": [
-				"80:80/tcp",
-				"443:443/tcp"
-			]
 		}
   ]
 }

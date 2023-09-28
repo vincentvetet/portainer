@@ -100,66 +100,6 @@
                 "container": "/etc/letsencrypt"
               }
             ]
-          },
-          {
-            "title": "Heimdall",
-			"type": 1,
-			"categories": ["Web"],
-			"description": "Heimdall est un moyen d'organiser de manière simple tous ces liens vers vos sites Web et applications Web les plus utilisés.",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/heimdall-icon.png",
-			"name": "heimdall_app",
-            "image": "linuxserver/heimdall:latest",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-                {
-					"default": "Europe/Paris",
-					"label": "TZ",
-					"name": "TZ"
-				}
-			],
-			"ports": [
-				"80:80/tcp",
-				"443:443/tcp"
-			],
-			"volumes": [
-				{
-					"bind": "/apps/heimdall",
-					"container": "/config"
-				}
-			]
-		},
-        {
-            "title": "Bitwarden",
-			"type": 1,
-			"categories": ["Gestion"],
-			"description": "Gestionnaire de mot de passe qui permet de générer et de conserver des mots de passe de manière sécurisée",
-			"logo": "https://raw.githubusercontent.com/bitwarden/brand/master/icons/1024x1024.png",
-			"name": "bitwarden_app",
-            "image": "vaultwarden/server:latest",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-			"ports": [
-				"80:80/tcp",
-				"443:443/tcp"
-                "3012:3012/tcp"
-			],
-			"volumes": [
-				{
-					"bind": "/apps/bitwarden/data",
-					"container": "/data"
-				}
-			]
-		}
+          }
   ]
 }

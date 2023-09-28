@@ -151,13 +151,34 @@
             "restart_policy": "unless-stopped",
 			"ports": [
 				"80:80/tcp",
-				"443:443/tcp"
+				"443:443/tcp",
                 "3012:3012/tcp"
 			],
 			"volumes": [
 				{
 					"bind": "/apps/bitwarden/data",
 					"container": "/data"
+				}
+			]
+		}
+        {
+            "title": "Nginx",
+			"type": 1,
+			"categories": ["Web"],
+			"description": "Nginx est un serveur Web fortement axé sur une concurrence élevée, des performances et une faible utilisation de la mémoire. Il peut également servir de serveur proxy inverse pour les protocoles HTTP, HTTPS, SMTP, POP3 et IMAP, ainsi que d'équilibreur de charge et de cache HTTP.",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nginx-icon.png",
+			"name": "nginx_app",
+            "image": "nginx:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+			"ports": [
+				"80:80/tcp",
+				"443:443/tcp"
+			],
+			"volumes": [
+				{
+					"bind": "/apps/nginx/html",
+					"container": "/usr/share/nginx/html"
 				}
 			]
 		}

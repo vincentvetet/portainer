@@ -2,60 +2,47 @@
     "version": "2",
     "templates": [
         {
-            "type": 1,
-            "title": "Wordpress",
-            "description": "Open-source marketing automation platform",
-            "categories": ["Web"],
+            "type": 3,
+            "title": "Bookstack",
+            "description": "Bookstack is a free and open source Wiki designed for creating beautiful documentation. Feautring a simple, but powerful WYSIWYG editor it allows for teams to create detailed and useful documentation with ease.",
+            "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bookstack2.png",
+            "categories": [
+              "Wiki"
+            ],
+            "note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
             "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wordpress.png",
-            "image": "wordpress:latest",
             "repository": {
-                "stackfile": "stack/wordpress-stack.yml",
-                "url": "https://github.com/vincentvetet/portainer"
-               },
-               "env": [
-                {
-                  "default": "80",
-                  "label": "Port externe pour le serveur Web transféré vers le port 80",
-                  "name": "WEB_SERVER_PORT"
-                },
-                {
-                  "default": "wordpress",
-                  "label": "Nom de la base de donnée",
-                  "name":"MYSQL_DATABASE_NAME"
-                },
-                {
-                  "default": "wordpress",
-                  "label": "Nom d'utilisateur de la base de données",
-                  "name": "MYSQL_DATABASE_USER_NAME"
-                },
-                {
-                  "label": "Mot de passe de base de données pour l'utilisateur",
-                  "name": "MYSQL_DATABASE_PASSWORD"
-                },
-                {
-                  "label": "Mot de passe root de la base de données",
-                  "name": "MYSQL_DATABASE_ROOT_PASSWORD"
-                }
-              ],
-              "volumes":[
-                {
-                  "default": "/",
-                  "label": "Où sera stocké /var/www/html",
-                  "name": "VOLUMES_HTML"
-                }
-                {
-                  "default": "db",
-                  "label": "Où sera stocké db",
-                  "name": "VOLUMES_DB"
-                }
-              ],
-              "note": "<b>Template crée par Vincentvetet.fr</b><br><b>Consultez ma page Github: <a href=\"https://github.com/vincentvetet/portainer\" target=\"_blank\">https://github.com/vincentvetet/portainer</a></b><br><br><b>Official Webpage: </b><a href=\"https://wordpress.com/\" target=\"_blank\">https://wordpress.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose\" target=\"_blank\">https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/wordpress_installation.md\" target=\"_blank\">wordpress_installation.md</a></h3><br><br><br>Deploys a Wordpress instance connected to a MySQL database.",
-              
-              "repository": {
-                "stackfile": "stack/wordpress-stack.yml",
-                "url": "https://github.com/vincentvetet/portainer"
+              "url": "https://github.com/SelfhostedPro/selfhosted_templates",
+              "stackfile": "Template/Stack/OMV5/bookstack.yml"
+            },
+            "env": [
+              {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "1000"
               },
-          }
+              {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "100"
+              },
+              {
+                "name": "TZ",
+                "label": "TZ"
+              },
+              {
+                "name": "DATABASE_PASSWORD",
+                "label": "DATABASE_PASSWORD"
+              },
+              {
+                "name": "MYSQL_ROOT_PASSWORD",
+                "label": "MYSQL_ROOT_PASSWORD"
+              },
+              {
+                "name": "PORT",
+                "label": "PORT"
+              }
+            ]
+          },
   ]
 }

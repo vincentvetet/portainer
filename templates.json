@@ -2,56 +2,104 @@
     "version": "2",
     "templates": [
         {
-            "type": 3,
-            "title": "Wordpress",
-            "description": "Configuration de Wordpress avec une base de données MySQL",
-            "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wordpress.png",
-            "categories": [
-              "Web"
-            ],
-            "note": "<b>Template crée par Vincentvetet.fr</b><br><b>Consultez ma page Github: <a href=\"https://github.com/vincentvetet/portainer\" target=\"_blank\">https://github.com/vincentvetet/portainer</a></b><br><br><b>Site Officiel: </b><a href=\"https://wordpress.com/\" target=\"_blank\">https://wordpress.com/</a><br><b>Documentation officiel Docker: </b><a href=\"https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose\" target=\"_blank\">https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/wordpress_installation.md\" target=\"_blank\">wordpress_installation.md</a></h3><br><br><br>Deploys a Wordpress instance connected to a MySQL database.",
+            "title": "Jellyfin",
+            "type": 1, 
+            "categories": ["Media Server"],
+            "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/jellyfin.png",
+            "name": "jellyfin",
+            "image": "linuxserver/jellyfin:latest",
             "platform": "linux",
-            "repository": {
-              "url": "https://github.com/vincentvetet/portainer",
-              "stackfile": "stack/wordpress-stack.yml"
-            },
-            "env": [
-                {
-                  "default": "80",
-                  "label": "Port externe pour le serveur Web transféré vers le port 80",
-                  "name": "WEB_SERVER_PORT"
-                },
-                {
-                  "default": "wordpress",
-                  "label": "Nom de la BDD",
-                  "name":"MYSQL_DATABASE_NAME"
-                },
-                {
-                  "default": "wordpress",
-                  "label": "Nom d'utilisateur de la BDD",
-                  "name": "MYSQL_DATABASE_USER_NAME"
-                },
-                {
-                  "label": "Mot de passe de BDD pour l'utilisateur",
-                  "name": "MYSQL_DATABASE_PASSWORD"
-                },
-                {
-                  "label": "Mot de passe root de la BDD",
-                  "name": "MYSQL_DATABASE_ROOT_PASSWORD"
-                }
+            "restart_policy": "unless-stopped",
+            "ports": [
+                "8096:8096/tcp",
+                "7359:7359/tcp",
+                "1900:1900/tcp"
               ],
-              "volumes":[
+            "volumes": [
                 {
-                  "default": "/",
-                  "label": "Où sera stocké /var/www/html",
-                  "name": "VOLUMES_HTML"
-                }
+                  "bind": "/apps/jellyfin/config",
+                  "container": "/config"
+                },
                 {
-                  "default": "db",
-                  "label": "Où sera stocké db",
-                  "name": "VOLUMES_DB"
+                    "bind": "/apps/jellyfin/cache",
+                    "container": "/cache"
+                },
+                {
+                    "bind": "/apps/jellyfin/config",
+                    "container": "/media"
+                },
+                {
+                    "bind": "/apps/jellyfin/media",
+                    "container": "/config"
+                },
+                {
+                    "bind": "/Théatre",
+                    "container": "/media/Théatre"
+                },
+                {
+                  "bind": "/Spectacle",
+                  "container": "/media/Spectacle"
+                },
+                {
+                  "bind": "/Manga",
+                  "container": "/media/Manga"
+                },
+                {
+                    "bind": "/Manga",
+                    "container": "/media/Animés"
+                },
+                {
+                    "bind": "/Manga",
+                    "container": "/media/Séries"
+                },
+                {
+                    "bind": "/Manga",
+                    "container": "/media/Emission"
+                },
+                {
+                    "bind": "/Manga",
+                    "container": "/media/Films"
+                },
+                {
+                    "bind": "/Manga",
+                    "container": "/media/Tutoriels"
                 }
               ]
-        }
+        },
+        {
+            "title": "Nginx Proxy Manager",
+            "type": 1,
+            "categories": ["Proxy Server"],
+            "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/proxy_mgr.png",
+            "name": "nginx-proxy-manager",
+            "image": "jc21/nginx-proxy-manager:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "env": [
+              {
+                "label": "DB_SQLITE_FILE",
+                "name": "DB_SQLITE_FILE",
+                "default": "/data/database.sqlite"
+              }
+            ],
+            "ports": [
+              "80:80/tcp",
+              "81:81/tcp",
+              "443:443/tcp"
+            ],
+            
+            "volumes": [
+              {
+                "bind": "/apps/npm/data",
+                "container": "/data"
+              },
+              {
+                "bind": "/apps/npm/data/letsencrypt",
+                "container": "/etc/letsencrypt"
+              }
+            ]
+          }
   ]
 }

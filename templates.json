@@ -9,7 +9,7 @@
             "categories": [
               "Web"
             ],
-            "note": "<b>Template crée par Vincentvetet.fr</b><br><b>Consultez ma page Github: <a href=\"https://github.com/vincentvetet/portainer\" target=\"_blank\">https://github.com/vincentvetet/portainer</a></b><br><br><b>Official Webpage: </b><a href=\"https://wordpress.com/\" target=\"_blank\">https://wordpress.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose\" target=\"_blank\">https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/wordpress_installation.md\" target=\"_blank\">wordpress_installation.md</a></h3><br><br><br>Deploys a Wordpress instance connected to a MySQL database.",
+            "note": "<b>Template crée par Vincentvetet.fr</b><br><b>Consultez ma page Github: <a href=\"https://github.com/vincentvetet/portainer\" target=\"_blank\">https://github.com/vincentvetet/portainer</a></b><br><br><b>Site Officiel: </b><a href=\"https://wordpress.com/\" target=\"_blank\">https://wordpress.com/</a><br><b>Documentation officiel Docker: </b><a href=\"https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose\" target=\"_blank\">https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/wordpress_installation.md\" target=\"_blank\">wordpress_installation.md</a></h3><br><br><br>Deploys a Wordpress instance connected to a MySQL database.",
             "platform": "linux",
             "repository": {
               "url": "https://github.com/vincentvetet/portainer",
@@ -23,21 +23,33 @@
                 },
                 {
                   "default": "wordpress",
-                  "label": "Nom de la base de donnée",
+                  "label": "Nom de la BDD",
                   "name":"MYSQL_DATABASE_NAME"
                 },
                 {
                   "default": "wordpress",
-                  "label": "Nom d'utilisateur de la base de données",
+                  "label": "Nom d'utilisateur de la BDD",
                   "name": "MYSQL_DATABASE_USER_NAME"
                 },
                 {
-                  "label": "Mot de passe de base de données pour l'utilisateur",
+                  "label": "Mot de passe de BDD pour l'utilisateur",
                   "name": "MYSQL_DATABASE_PASSWORD"
                 },
                 {
-                  "label": "Mot de passe root de la base de données",
+                  "label": "Mot de passe root de la BDD",
                   "name": "MYSQL_DATABASE_ROOT_PASSWORD"
+                }
+              ],
+              "volumes":[
+                {
+                  "default": "/",
+                  "label": "Où sera stocké /var/www/html",
+                  "name": "VOLUMES_HTML"
+                }
+                {
+                  "default": "db",
+                  "label": "Où sera stocké db",
+                  "name": "VOLUMES_DB"
                 }
               ]
         }

@@ -82,7 +82,7 @@
             "env": [
               {
                 "label": "DB_SQLITE_FILE",
-                "name": "DB_SQLITE_FILE",
+                "name": "Fichier BDD SQLITE",
                 "default": "/data/database.sqlite"
               }
             ],
@@ -117,17 +117,17 @@
             "env": [
 				{
 					"default": "1000",
-					"label": "PUID",
+					"label": "User ID",
 					"name": "PUID"
 				},
 				{
 					"default": "1000",
-					"label": "PGID",
+					"label": "Groupe ID",
 					"name": "PGID"
 				},
                 {
 					"default": "Europe/Paris",
-					"label": "TZ",
+					"label": "Timezone",
 					"name": "TZ"
 				}
 			],
@@ -201,22 +201,22 @@
             "env": [
 				{
 					"default": "1000",
-					"label": "PUID",
+					"label": "User ID",
 					"name": "PUID"
 				},
 				{
 					"default": "1000",
-					"label": "PGID",
+					"label": "Groupe ID",
 					"name": "PGID"
 				},
                 {
 					"default": "Europe/Paris",
-					"label": "TZ",
+					"label": "Timezone",
 					"name": "TZ"
 				},
                 {
 					"default": "8080",
-					"label": "WEBUI PORT",
+					"label": "Port WEB",
 					"name": "WEBUI_PORT"
 				}
 			],
@@ -250,17 +250,17 @@
 			"env": [
 				{
 					"default": "1000",
-					"label": "PUID",
+					"label": "User ID",
 					"name": "PUID"
 				},
 				{
 					"default": "100",
-					"label": "PGID",
+					"label": "Groupe ID",
 					"name": "PGID"
 				},
                 {
 					"default": "Europe/Paris",
-					"label": "TZ",
+					"label": "Timezone",
 					"name": "TZ"
 				},
                 {

@@ -8,7 +8,7 @@
             "description": "Jellyfin est un système multimédia logiciel libre qui vous permet de contrôler la gestion et la diffusion de vos médias. Il s'agit d'une alternative aux systèmes propriétaires Emby et Plex, pour fournir des médias depuis un serveur dédié aux appareils des utilisateurs finaux via plusieurs applications.",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/jellyfin.png",
             "name": "jellyfin_app",
-            "image": "linuxserver/jellyfin:latest",
+            "image": "jellyfin/jellyfin:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
             "network": "jellyfin",

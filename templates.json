@@ -278,6 +278,12 @@
 					"label": "Intervalles de mise à jour",
 					"name": "WATCHTOWER_POLL_INTERVAL"
 				}
+			],
+            "volumes": [
+                {
+					"bind": "/var/run/docker.sock",
+					"container": "/var/run/docker.sock"
+				}
 			]
 		}
   ]

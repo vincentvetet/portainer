@@ -160,7 +160,7 @@
 					"container": "/data"
 				}
 			]
-		}
+		},
         {
             "title": "Nginx",
 			"type": 1,
@@ -179,6 +179,54 @@
 				{
 					"bind": "/apps/nginx/html",
 					"container": "/usr/share/nginx/html"
+				}
+			]
+		},
+        {
+            "title": "qBittorrent",
+			"type": 1,
+			"categories": ["Web"],
+			"description": "Le projet qBittorrent vise à fournir une alternative logicielle open source à µTorrent. qBittorrent est basé sur la boîte à outils Qt et la bibliothèque libtorrent-rasterbar.",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/qbittorrent-icon.png",
+			"name": "qbittorrent_app",
+            "image": "lscr.io/linuxserver/qbittorrent:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+                {
+					"default": "Europe/Paris",
+					"label": "TZ",
+					"name": "TZ"
+				},
+                {
+					"default": "8080",
+					"label": "WEBUI PORT",
+					"name": "WEBUI_PORT"
+				}
+			],
+			"ports": [
+				"8080:8080/tcp",
+				"6881:6881/tcp",
+                "6881:6881/udp"
+			],
+			"volumes": [
+				{
+					"bind": "/apps/qbittorrent/config",
+					"container": "/config"
+				},
+                {
+					"bind": "/apps/qbittorrent/downloads",
+					"container": "/downloads"
 				}
 			]
 		}

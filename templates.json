@@ -283,15 +283,17 @@
 			]
 		},
         {
-			"title": "Wordpress",
+            "title": "Wordpress",
 			"type": 1,
 			"categories": ["CMS"],
 			"description": "Wordpress",
-			"name": "*_app",
+			"logo": "https://raw.githubusercontent.com/bitwarden/brand/master/icons/1024x1024.png",
+			"name": "wordpress_app",
             "image": "wordpress:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "ports": [
+            "network": "wordpress",
+			"ports": [
 				"80:80/tcp"
 			]
-        }
+		}

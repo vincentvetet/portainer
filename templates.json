@@ -332,4 +332,18 @@
             "ports": [
 				"3306:3306/tcp"
 			]
+        },
+        {
+			"title": "Wordpress",
+			"type": 1,
+			"categories": ["Web","CMD"],
+			"description": "Wordpress",
+			"logo": "",
+			"name": "*_app",
+            "image": "wordpress:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "ports": [
+				"80:80/tcp"
+			]
         }

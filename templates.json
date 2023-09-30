@@ -283,37 +283,53 @@
 			]
 		},
         {
-			"title": "Wordpress",
-            "type": 3,
-			"categories": ["Web","CMS"],
-			"description": "Wordpress setup with a MySQL database",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wordpress.png",
-			"platform": "linux",
-			"repository": {
-				"stackfile": "stack/wordpress-stack.yml",
-				"url": "https://github.com/vincentvetet/portainer"
-			},
-			
+			"title": "MariaDB",
+			"type": 1,
+			"categories": ["Web","BDD"],
+			"description": "MariaDB",
+			"logo": "",
+			"name": "*_db",
+            "image": "linuxserver/mariadb:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
 			"env": [
 				{
-					"default": "80",
-					"label": "External Port for webserver forward to port 80",
-					"name": "WEB_SERVER_PORT"
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
 				},
 				{
-					"default": "wordpress",
-					"label": "Database user name",
-					"name": "MYSQL_DATABASE_USER_NAME"
+                    "default": "1000",
+					"label": "PGID",
+					"name": "PGID"
 				},
 				{
-					"label": "Database password for user",
-					"name": "MYSQL_DATABASE_PASSWORD"
+					"default": "Europe/Paris",
+					"label": "Timezone",
+					"name": "TZ"
 				},
-				{
-					"label": "Database root password",
-					"name": "MYSQL_DATABASE_ROOT_PASSWORD"
-				}
+                {
+                    "default": "ROOT_ACCESS_PASSWORD",
+					"label": "MYSQL_ROOT_PASSWORD",
+					"name": "MYSQL_ROOT_PASSWORD" 
+                }
+                {
+                    "default": "USER_DB_NAME",
+					"label": "MYSQL_DATABASE",
+					"name": "MYSQL_DATABASE" 
+                }
+                {
+                    "default": "MYSQL_USER",
+					"label": "MYSQL_USER",
+					"name": "MYSQL_USER" 
+                }
+                {
+                    "default": "DATABASE_PASSWORD",
+					"label": "MYSQL_PASSWORD",
+					"name": "MYSQL_PASSWORD" 
+                }
+			],
+            "ports": [
+				"3306:3306/tcp"
 			]
         }
-    ]
-}

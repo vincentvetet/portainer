@@ -283,56 +283,6 @@
 			]
 		},
         {
-			"title": "MariaDB",
-			"type": 1,
-			"categories": ["BDD"],
-			"description": "MariaDB",
-			"name": "*_db",
-            "image": "linuxserver/mariadb:latest",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-                    "default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"default": "Europe/Paris",
-					"label": "Timezone",
-					"name": "TZ"
-				},
-                {
-                    "default": "ROOT_ACCESS_PASSWORD",
-					"label": "MYSQL_ROOT_PASSWORD",
-					"name": "MYSQL_ROOT_PASSWORD" 
-                },
-                {
-                    "default": "USER_DB_NAME",
-					"label": "MYSQL_DATABASE",
-					"name": "MYSQL_DATABASE" 
-                },
-                {
-                    "default": "MYSQL_USER",
-					"label": "MYSQL_USER",
-					"name": "MYSQL_USER" 
-                },
-                {
-                    "default": "DATABASE_PASSWORD",
-					"label": "MYSQL_PASSWORD",
-					"name": "MYSQL_PASSWORD" 
-                }
-			],
-            "ports": [
-				"3306:3306/tcp"
-			]
-        },
-        {
 			"title": "Wordpress",
 			"type": 1,
 			"categories": ["CMS"],

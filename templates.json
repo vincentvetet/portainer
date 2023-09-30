@@ -285,7 +285,7 @@
         {
 			"title": "MariaDB",
 			"type": 1,
-			"categories": ["Web","BDD"],
+			"categories": ["BDD"],
 			"description": "MariaDB",
 			"name": "*_db",
             "image": "linuxserver/mariadb:latest",
@@ -335,7 +335,7 @@
         {
 			"title": "Wordpress",
 			"type": 1,
-			"categories": ["Web","CMD"],
+			"categories": ["CMS"],
 			"description": "Wordpress",
 			"name": "*_app",
             "image": "wordpress:latest",

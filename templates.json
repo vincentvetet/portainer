@@ -281,19 +281,4 @@
 					"container": "/var/run/docker.sock"
 				}
 			]
-		},
-        {
-            "title": "Wordpress",
-			"type": 1,
-			"categories": ["CMS"],
-			"description": "Wordpress",
-			"logo": "https://raw.githubusercontent.com/bitwarden/brand/master/icons/1024x1024.png",
-			"name": "wordpress_app",
-            "image": "wordpress:latest",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "network": "wordpress",
-			"ports": [
-				"80:80/tcp"
-			]
 		}

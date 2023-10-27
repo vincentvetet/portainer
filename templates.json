@@ -11,7 +11,7 @@
             "image": "jellyfin/jellyfin:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "network": "jellyfin",
+            "network": "jellyfin_network",
             "ports": [
                 "8096:8096/tcp",
                 "7359:7359/tcp",
@@ -120,7 +120,7 @@
             "image": "jc21/nginx-proxy-manager:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "network": "npm",
+            "network": "npm_network",
             "env": [
               {
                 "label": "DB_SQLITE_FILE",
@@ -155,7 +155,7 @@
             "image": "linuxserver/heimdall:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "network": "heimdall",
+            "network": "heimdall_network",
             "env": [
 				{
 					"default": "1000",
@@ -194,7 +194,7 @@
             "image": "vaultwarden/server:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "network": "bitwarden",
+            "network": "bitwarden_network",
 			"ports": [
 				"80:80/tcp",
 				"443:443/tcp",
@@ -217,7 +217,7 @@
             "image": "nginx:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "network": "nginx",
+            "network": "nginx_network",
 			"ports": [
 				"80:80/tcp",
 				"443:443/tcp"
@@ -239,7 +239,7 @@
             "image": "lscr.io/linuxserver/qbittorrent:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "network": "qbittorrent",
+            "network": "qbittorrent_network",
             "env": [
 				{
 					"default": "1000",
@@ -288,7 +288,7 @@
             "image": "containrrr/watchtower:latest",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "network": "watchtower",
+            "network": "watchtower_network",
 			"env": [
 				{
 					"default": "1000",

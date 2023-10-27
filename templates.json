@@ -64,6 +64,60 @@
                 }
               ]
         },
+		{
+            "title": "Plex",
+            "type": 1,
+            "categories": ["Media Server"],
+            "description": "Plex est un logiciel client-serveur de gestion multimédia qui permet d'accéder à des films, séries, musiques et photos sur le serveur peu importe où le client se situe, s'il a une connexion Internet",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/plex-icon.png",
+            "name": "plex_app",
+            "image": "linuxserver/plex:latest",
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "network": "plex_network",
+            "env": [
+				      {
+					      "default": "1028",
+					      "label": "User ID",
+					      "name": "PUID"
+			      	},
+			      	{
+					      "default": "100",
+					      "label": "Group ID",
+					      "name": "PGID"
+			      	},
+              {
+					      "default": "Europe/Paris",
+					      "label": "Timezone",
+					      "name": "TZ"
+				      }
+			      ],
+            "ports": [
+              "32400:32400/tcp"
+            ],
+            "volumes": [
+              {
+                "bind": "/volume1/docker/apps/plex",
+                "container": "/config"
+              },
+              {
+                "bind": "/volume1/videos/Films",
+                "container": "/media/movies"
+              },
+              {
+                "bind": "/volume1/videos/Séries",
+                "container": "/media/tvshows"
+              },
+              {
+                "bind": "/volume1/videos/Manga",
+                "container": "/media/manga"
+              },
+              {
+                "bind": "/volume1/videos/Animés",
+                "container": "/media/anime"
+              }
+            ]
+          },
         {
             "title": "Nginx Proxy Manager",
             "type": 1,

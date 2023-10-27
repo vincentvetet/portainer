@@ -97,24 +97,12 @@
             ],
             "volumes": [
               {
-                "bind": "/volume1/docker/apps/plex",
+                "bind": "/volume1/docker/apps/plex/config",
                 "container": "/config"
               },
               {
-                "bind": "/volume1/videos/Films",
-                "container": "/media/movies"
-              },
-              {
-                "bind": "/volume1/videos/Séries",
-                "container": "/media/tvshows"
-              },
-              {
-                "bind": "/volume1/videos/Manga",
-                "container": "/media/manga"
-              },
-              {
-                "bind": "/volume1/videos/Animés",
-                "container": "/media/anime"
+                "bind": "/volume1/video",
+                "container": "/media"
               }
             ]
           },

@@ -103,6 +103,10 @@
               {
                 "bind": "/volume1/video",
                 "container": "/media"
+              },
+			  {
+                "bind": "/volume1/music",
+                "container": "/media"
               }
             ]
           },

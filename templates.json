@@ -76,22 +76,22 @@
             "restart_policy": "unless-stopped",
             "network": "plex_network",
             "env": [
-				      {
-					      "default": "1028",
-					      "label": "User ID",
-					      "name": "PUID"
-			      	},
-			      	{
-					      "default": "100",
-					      "label": "Group ID",
-					      "name": "PGID"
-			      	},
+        	  {
+				"default": "1028",
+				"label": "User ID",
+				"name": "PUID"
+			  },
               {
-					      "default": "Europe/Paris",
-					      "label": "Timezone",
-					      "name": "TZ"
-				      }
-			      ],
+				"default": "100",
+				"label": "Group ID",
+				"name": "PGID"
+			  },
+           	  {
+				"default": "Europe/Paris",
+				"label": "Timezone",
+				"name": "TZ"
+			  }
+			],
             "ports": [
               "32400:32400/tcp"
             ],

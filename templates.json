@@ -106,7 +106,7 @@
               },
 			  {
                 "bind": "/volume1/music",
-                "container": "/media"
+                "container": "/music"
               }
             ]
           },

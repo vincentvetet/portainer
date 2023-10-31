@@ -392,6 +392,35 @@
             "ports": [
 				"80:80/tcp"
 			]
+        },
+        {
+          "title": "Pufferpanel",
+          "type": 1,
+          "categories": ["Serveur","Jeux"],
+          "description": "Pufferpanel",
+          "logo": "",
+          "name": "pufferpanel_app",
+          "image": "pufferpanel/pufferpanel:latest",
+          "platform": "linux",
+          "restart_policy": "unless-stopped",
+          "volumes": [
+          {
+           "bind": "/volume1/docker/apps/pufferpanel/config",
+           "container": "/etc/pufferpanel"
+          },
+          {
+            "bind": "/var/lib/pufferpanel",
+            "container": "/var/lib/pufferpanel"
+          },
+          {
+            "bind": "/var/run/docker.sock",
+            "container": "/var/run/docker.sock"
+          }
+          ],
+          "ports": [
+            "8080:8080/tcp",
+            "5657:5657/tcp"
+          ]
         }
     ]
 }

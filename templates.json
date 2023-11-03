@@ -435,43 +435,43 @@
           "env": [
             {
               "default": "1",
-              "label": "RUST_OXIDE_ENABLED",
-              "name": "Activation du mode Oxide"
+              "label": "Activation du mode Oxide",
+              "name": "RUST_OXIDE_ENABLED"
             },
             {
               "default": "Server Local",
-              "label": "RUST_SERVER_NAME",
-              "name": "Nom du serveur"
+              "label": "Nom du serveur",
+              "name": "RUST_SERVER_NAME"
             },
             {
               "default": "3500",
-              "label": "RUST_SERVER_WORLDSIZE",
-              "name": "Taille de la carte"
+              "label": "Taille de la carte",
+              "name": "RUST_SERVER_WORLDSIZE"
             },
             {
               "default": "12345",
-              "label": "RUST_RCON_PASSWORD",
-              "name": "Mot de passe RCON" 
+              "label": "Mot de passe RCON",
+              "name": "RUST_RCON_PASSWORD" 
             },
             {
               "default": "28016",
-              "label": "RUST_RCON_PORT",
-              "name": "Port du RCON" 
+              "label": "Port RCON",
+              "name": "RUST_RCON_PORT" 
             },
             {
               "default": "28015",
-              "label": "RUST_SERVER_PORT",
-              "name": "Port du serveur" 
+              "label": "Port du serveur",
+              "name": "RUST_SERVER_PORT" 
             },
             {
               "default": "500",
-              "label": "RUST_SERVER_MAXPLAYERS",
-              "name": "Nombre maximum de joueur" 
+              "label": "Nombre maximum de joueur",
+              "name": "RUST_SERVER_MAXPLAYERS" 
             },
             {
               "default": "28012",
-              "label": "RUST_APP_PORT",
-              "name": "Port du app" 
+              "label": "Port du APP",
+              "name": "RUST_APP_PORT" 
             }
           ],
           "volumes": [
@@ -481,14 +481,10 @@
           }
           ],
           "ports": [
-            "8080:8080/tcp",
             "28015:28015",
-            "28015:28015/udp",
             "28016:28016",
-            "28016:28016/udp",
             "28082:28082",
-            "28082:28082/udp",
-            "8082:8080"
+            "8080:8080"
           ]
         }
     ]

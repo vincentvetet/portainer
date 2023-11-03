@@ -6,7 +6,7 @@
             "type": 1, 
             "categories": ["Media Server"],
             "description": "Jellyfin est un système multimédia logiciel libre qui vous permet de contrôler la gestion et la diffusion de vos médias. Il s'agit d'une alternative aux systèmes propriétaires Emby et Plex, pour fournir des médias depuis un serveur dédié aux appareils des utilisateurs finaux via plusieurs applications.",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/jellyfin.png",
+            "logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/jellyfin-logo.png",
             "name": "jellyfin_app",
             "image": "jellyfin/jellyfin:latest",
             "platform": "linux",
@@ -69,7 +69,7 @@
             "type": 1,
             "categories": ["Media Server"],
             "description": "Plex est un logiciel client-serveur de gestion multimédia qui permet d'accéder à des films, séries, musiques et photos sur le serveur peu importe où le client se situe, s'il a une connexion Internet",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/plex-icon.png",
+            "logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/plex-logo.png",
             "name": "plex_app",
             "image": "linuxserver/plex:latest",
             "platform": "linux",
@@ -115,7 +115,7 @@
             "type": 1,
             "categories": ["Proxy Server"],
             "description": "Nginx Proxy Manager vous permet de transférer facilement vers vos sites Web exécutés chez vous ou autrement, y compris SSL gratuit, sans avoir à en savoir trop sur Nginx ou Letsencrypt.",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/proxy_mgr.png",
+            "logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/npm-logo.png",
             "name": "npm_app",
             "image": "jc21/nginx-proxy-manager:latest",
             "platform": "linux",
@@ -150,7 +150,7 @@
 			"type": 1,
 			"categories": ["Web"],
 			"description": "Heimdall est un moyen d'organiser de manière simple tous ces liens vers vos sites Web et applications Web les plus utilisés.",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/heimdall-icon.png",
+			"logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/heimdall-logo.png",
 			"name": "heimdall_app",
             "image": "linuxserver/heimdall:latest",
             "platform": "linux",
@@ -189,7 +189,7 @@
 			"type": 1,
 			"categories": ["Gestion"],
 			"description": "Gestionnaire de mot de passe qui permet de générer et de conserver des mots de passe de manière sécurisée",
-			"logo": "https://raw.githubusercontent.com/bitwarden/brand/master/icons/1024x1024.png",
+			"logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/bitwarden-logo.png",
 			"name": "bitwarden_app",
             "image": "vaultwarden/server:latest",
             "platform": "linux",
@@ -212,7 +212,7 @@
 			"type": 1,
 			"categories": ["Web"],
 			"description": "Nginx est un serveur Web fortement axé sur une concurrence élevée, des performances et une faible utilisation de la mémoire. Il peut également servir de serveur proxy inverse pour les protocoles HTTP, HTTPS, SMTP, POP3 et IMAP, ainsi que d'équilibreur de charge et de cache HTTP.",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nginx-icon.png",
+			"logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/nginx-logo.png",
 			"name": "nginx_app",
             "image": "nginx:latest",
             "platform": "linux",
@@ -234,7 +234,7 @@
 			"type": 1,
 			"categories": ["Web"],
 			"description": "Le projet qBittorrent vise à fournir une alternative logicielle open source à µTorrent. qBittorrent est basé sur la boîte à outils Qt et la bibliothèque libtorrent-rasterbar.",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/qbittorrent-icon.png",
+			"logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/qbittorrent-logo.png",
 			"name": "qbittorrent_app",
             "image": "lscr.io/linuxserver/qbittorrent:latest",
             "platform": "linux",
@@ -283,7 +283,7 @@
 			"type": 1,
 			"categories": ["Outils"],
 			"description": "Avec Watchtower, vous pouvez mettre à jour la version en cours d'exécution de votre application conteneurisée simplement en envoyant une nouvelle image vers le Docker Hub ou votre propre registre d'images. Watchtower supprimera votre nouvelle image, arrêtera progressivement votre conteneur existant et le redémarrera avec les mêmes options que celles utilisées lors de son déploiement initial.",
-			"logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/watchtower.png",
+			"logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/watchtower-logo.png",
 			"name": "watchtower_app",
             "image": "containrrr/watchtower:latest",
             "platform": "linux",
@@ -333,7 +333,7 @@
 			"type": 1,
 			"categories": ["Web","BDD"],
 			"description": "MariaDB",
-			"logo": "",
+			"logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/mariadb-logo.png",
 			"name": "*_db",
             "image": "linuxserver/mariadb:latest",
             "platform": "linux",
@@ -384,7 +384,7 @@
 			"type": 1,
 			"categories": ["Web","CMS"],
 			"description": "Wordpress",
-			"logo": "",
+			"logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/wordpress-logo.png",
 			"name": "*_app",
             "image": "wordpress:latest",
             "platform": "linux",
@@ -398,7 +398,7 @@
           "type": 1,
           "categories": ["Serveur","Jeux"],
           "description": "Pufferpanel",
-          "logo": "",
+          "logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/pufferpanel-logo.png",
           "name": "pufferpanel_app",
           "image": "pufferpanel/pufferpanel:latest",
           "platform": "linux",
@@ -420,6 +420,75 @@
           "ports": [
             "8080:8080/tcp",
             "5657:5657/tcp"
+          ]
+        },
+        {
+          "title": "Server Rust",
+          "type": 1,
+          "categories": ["Serveur","Jeux"],
+          "description": "Serveur pour le jeux Rust",
+          "logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/rust-logo.png",
+          "name": "rustserver_app",
+          "image": "didstopia/rust-server:latest",
+          "platform": "linux",
+          "restart_policy": "unless-stopped",
+          "env": [
+            {
+              "default": "1",
+              "label": "RUST_OXIDE_ENABLED",
+              "name": "Activation du mode Oxide"
+            },
+            {
+              "default": "Server Local",
+              "label": "RUST_SERVER_NAME",
+              "name": "Nom du serveur"
+            },
+            {
+              "default": "3500",
+              "label": "RUST_SERVER_WORLDSIZE",
+              "name": "Taille de la carte"
+            },
+            {
+              "default": "12345",
+              "label": "RUST_RCON_PASSWORD",
+              "name": "Mot de passe RCON" 
+            },
+            {
+              "default": "28016",
+              "label": "RUST_RCON_PORT",
+              "name": "Port du RCON" 
+            },
+            {
+              "default": "28015",
+              "label": "RUST_SERVER_PORT",
+              "name": "Port du serveur" 
+            },
+            {
+              "default": "500",
+              "label": "RUST_SERVER_MAXPLAYERS",
+              "name": "Nombre maximum de joueur" 
+            },
+            {
+              "default": "28012",
+              "label": "RUST_APP_PORT",
+              "name": "Port du app" 
+            }
+          ],
+          "volumes": [
+          {
+           "bind": "/volume1/docker/apps/rust/",
+           "container": "/steamcmd/rust"
+          }
+          ],
+          "ports": [
+            "8080:8080/tcp",
+            "28015:28015",
+            "28015:28015/udp",
+            "28016:28016",
+            "28016:28016/udp",
+            "28082:28082",
+            "28082:28082/udp",
+            "8082:8080"
           ]
         }
     ]

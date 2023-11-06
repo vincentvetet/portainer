@@ -435,13 +435,28 @@
           "env": [
             {
               "default": "1",
-              "label": "Activation du mode Oxide",
+              "label": "Activation du MOD Oxide",
               "name": "RUST_OXIDE_ENABLED"
             },
             {
               "default": "Server Local",
               "label": "Nom du serveur",
               "name": "RUST_SERVER_NAME"
+            },
+            {
+              "default": "Il s'agit d'un serveur Rust exécuté dans un conteneur Docker !",
+              "label": "Description du serveur (saut de ligne /n)",
+              "name": "RUST_SERVER_DESCRIPTION"
+            },
+            {
+              "default": "https://hub.docker.com/r/didstopia/rust-server/",
+              "label": "URL du serveur",
+              "name": "RUST_SERVER_URL"
+            },
+            {
+              "default": "",
+              "label": "Banniere du serveur",
+              "name": "RUST_SERVER_BANNER_URL"
             },
             {
               "default": "3500",
@@ -472,6 +487,26 @@
               "default": "28012",
               "label": "Port du APP",
               "name": "RUST_APP_PORT" 
+            },
+            {
+              "default": "Europe/Paris",
+              "label": "Timezone",
+              "name": "TZ" 
+            },
+            {
+              "default": "100",
+              "label": "Group ID",
+              "name": "Group ID" 
+            },
+            {
+              "default": "1028",
+              "label": "User ID",
+              "name": "PUID" 
+            },
+            {
+              "default": "-batchmode -load -nographics +server.secure 1",
+              "label": "Argument du démarrage",
+              "name": "RUST_SERVER_STARTUP_ARGUMENTS" 
             }
           ],
           "volumes": [

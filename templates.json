@@ -496,7 +496,7 @@
             {
               "default": "100",
               "label": "Group ID",
-              "name": "Group ID" 
+              "name": "GUID" 
             },
             {
               "default": "1028",

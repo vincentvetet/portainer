@@ -460,8 +460,13 @@
             },
             {
               "default": "3500",
-              "label": "Taille de la carte",
+              "label": "Taille de la carte (Worldsize)",
               "name": "RUST_SERVER_WORLDSIZE"
+            },
+            {
+              "default": "12345",
+              "label": "Serveur SEED",
+              "name": "RUST_SERVER_SEED"
             },
             {
               "default": "12345",

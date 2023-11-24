@@ -545,6 +545,10 @@
           {
            "bind": "/volume1/docker/apps/uptimekuma/data",
            "container": "/app/data"
+          },
+          {
+            "bind": "/var/run/docker.sock",
+            "container": "/var/run/docker.sock"
           }
           ],
           "ports": [

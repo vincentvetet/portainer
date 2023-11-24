@@ -530,6 +530,26 @@
             "8080:8080/tcp",
             "8080:8080/udp"
           ]
+        },
+        {
+          "title": "Uptime Kuma",
+          "type": 1,
+          "categories": ["Outils"],
+          "description": "Un outil de surveillance sophistiqué et auto-hébergé",
+          "logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/uptimekuma-logo.png",
+          "name": "uptimekuma_app",
+          "image": "louislam/uptime-kuma:latest",
+          "platform": "linux",
+          "restart_policy": "unless-stopped",
+          "volumes": [
+          {
+           "bind": "/volume1/docker/apps/uptimekuma/data",
+           "container": "/app/data"
+          }
+          ],
+          "ports": [
+            "3001:3001/tcp"
+          ]
         }
     ]
 }

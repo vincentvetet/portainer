@@ -158,12 +158,12 @@
             "network": "heimdall_network",
             "env": [
 				{
-					"default": "1000",
+					"default": "1028",
 					"label": "User ID",
 					"name": "PUID"
 				},
 				{
-					"default": "1000",
+					"default": "100",
 					"label": "Group ID",
 					"name": "PGID"
 				},
@@ -242,12 +242,12 @@
             "network": "qbittorrent_network",
             "env": [
 				{
-					"default": "1000",
+					"default": "1028",
 					"label": "User ID",
 					"name": "PUID"
 				},
 				{
-					"default": "1000",
+					"default": "100",
 					"label": "Group ID",
 					"name": "PGID"
 				},
@@ -291,7 +291,7 @@
             "network": "watchtower_network",
 			"env": [
 				{
-					"default": "1000",
+					"default": "1028",
 					"label": "User ID",
 					"name": "PUID"
 				},
@@ -340,12 +340,12 @@
             "restart_policy": "unless-stopped",
 			"env": [
 				{
-					"default": "1000",
+					"default": "1028",
 					"label": "PUID",
 					"name": "PUID"
 				},
 				{
-                    "default": "1000",
+          "default": "100",
 					"label": "PGID",
 					"name": "PGID"
 				},
@@ -501,7 +501,7 @@
             {
               "default": "100",
               "label": "Group ID",
-              "name": "GUID" 
+              "name": "PGID" 
             },
             {
               "default": "1028",

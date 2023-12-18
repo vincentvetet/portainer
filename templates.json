@@ -82,7 +82,7 @@
 				"name": "PUID"
 			  },
               {
-				"default": "100",
+				"default": "65536",
 				"label": "Group ID",
 				"name": "PGID"
 			  },
@@ -163,7 +163,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "65536",
 					"label": "Group ID",
 					"name": "PGID"
 				},
@@ -247,7 +247,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "65536",
 					"label": "Group ID",
 					"name": "PGID"
 				},
@@ -296,7 +296,7 @@
 					"name": "PUID"
 				},
 				{
-					"default": "100",
+					"default": "65536",
 					"label": "Group ID",
 					"name": "PGID"
 				},
@@ -345,8 +345,8 @@
 					"name": "PUID"
 				},
 				{
-          "default": "100",
-					"label": "PGID",
+          "default": "65536",
+					"label": "Group ID",
 					"name": "PGID"
 				},
 				{
@@ -499,7 +499,7 @@
               "name": "TZ" 
             },
             {
-              "default": "100",
+              "default": "65536",
               "label": "Group ID",
               "name": "PGID" 
             },

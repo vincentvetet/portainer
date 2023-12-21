@@ -195,6 +195,18 @@
             "platform": "linux",
             "restart_policy": "unless-stopped",
             "network": "bitwarden_network",
+            "env": [
+              {
+                "default": "1028",
+                "label": "User ID",
+                "name": "PUID"
+              },
+              {
+                "default": "65536",
+                "label": "Group ID",
+                "name": "PGID"
+              },
+            ],
 			"ports": [
 				"80:80/tcp",
 				"443:443/tcp",

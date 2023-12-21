@@ -191,22 +191,22 @@
 			"description": "Gestionnaire de mot de passe qui permet de générer et de conserver des mots de passe de manière sécurisée",
 			"logo": "https://raw.githubusercontent.com/vincentvetet/portainer/main/images/bitwarden-logo.png",
 			"name": "bitwarden_app",
-            "image": "vaultwarden/server:latest",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "network": "bitwarden_network",
-            "env": [
-              {
-                "default": "1028",
-                "label": "User ID",
-                "name": "PUID"
-              },
-              {
-                "default": "65536",
-                "label": "Group ID",
-                "name": "PGID"
-              },
-            ],
+      "image": "vaultwarden/server:latest",
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "network": "bitwarden_network",
+      "env": [
+      {
+        "default": "1028",
+        "label": "User ID",
+        "name": "PUID"
+      },
+      {
+        "default": "65536",
+        "label": "Group ID",
+        "name": "PGID"
+      }
+      ],
 			"ports": [
 				"80:80/tcp",
 				"443:443/tcp",
